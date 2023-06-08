@@ -7,11 +7,27 @@ const botao = document.getElementById("botao");
 
 
 botao.addEventListener('click', () => {
-    valorNome = Nome.value;
-    valorCPF = CPF.value;
-    valorTelefone = Telefone.value;
-    valorEmail = Email.value;
-    valorQuantidade = Quantidade.value;
+    let dados = {
+        valorNome: Nome.value,
+        valorCPF: CPF.value,
+        valorTelefone: Telefone.value,
+        valorEmail: Email.value,
+        valorQuantidade: Quantidade.value
+    };
 
+    const opcoes = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dados)
+    };
 
+    fetch('localhost:3000', opcoes)
+        .then(response => {
+
+        })
+        .catch(error => {
+            console.error(error)
+        })
 });
