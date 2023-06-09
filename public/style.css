@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(46, 44, 44);
+    background-image: url("assets/imagemPizza.jpg");
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
